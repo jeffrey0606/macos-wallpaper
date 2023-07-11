@@ -44,8 +44,12 @@ public enum Wallpaper {
 	https://openradar.appspot.com/radar?id=4959084113559552
 	*/
 	private static func getFromDirectory(_ url: URL) throws -> URL {
-		let appSupportDirectory = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-		let dbURL = appSupportDirectory.appendingPathComponent("Dock/desktoppicture.db", isDirectory: false)
+//		let appSupportDirectory = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+//		let dbURL = appSupportDirectory.appendingPathComponent("Dock/desktoppicture.db", isDirectory: false)
+        
+//        let dbURL = URL(fileURLWithPath: "/Users/jeff/Library/Application Support/Dock/desktoppicture.db")
+        let dbURL = URL(fileURLWithPath: "~/Library/Application Support/Dock/desktoppicture.db").standardizedFileURL
+
 
 		let table = Table("data")
 		let column = Expression<String>("value")
