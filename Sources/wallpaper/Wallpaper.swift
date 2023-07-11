@@ -48,7 +48,7 @@ public enum Wallpaper {
 //		let dbURL = appSupportDirectory.appendingPathComponent("Dock/desktoppicture.db", isDirectory: false)
         
 //        let dbURL = URL(fileURLWithPath: "/Users/jeff/Library/Application Support/Dock/desktoppicture.db")
-        let dbURL = URL(fileURLWithPath: "~/Library/Application Support/Dock/desktoppicture.db").standardizedFileURL
+        let dbURL = URL(fileURLWithPath: "~/Library/Application Support/Dock/desktoppicture.db")
 
 
 		let table = Table("data")
