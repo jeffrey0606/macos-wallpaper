@@ -64,7 +64,7 @@ public enum Wallpaper {
 	*/
 	public static func get(screen: Screen = .all) throws -> [URL] {
 		let wallpaperURLs = screen.nsScreens.compactMap { NSWorkspace.shared.desktopImageURL(for: $0) }
-		return try wallpaperURLs.map { $0 }
+		return wallpaperURLs.map { $0 }
 	}
 
 	/**
@@ -115,7 +115,7 @@ public enum Wallpaper {
 
 		options[.fillColor] = fillColor
 
-		try forceRefreshIfNeeded(image, screen: screen)
+//		try forceRefreshIfNeeded(image, screen: screen)
 
 		for nsScreen in screen.nsScreens {
 			try NSWorkspace.shared.setDesktopImageURL(image, for: nsScreen, options: options)
