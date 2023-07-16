@@ -115,7 +115,7 @@ public enum Wallpaper {
 
 		options[.fillColor] = fillColor
 
-//		try forceRefreshIfNeeded(image, screen: screen)
+		try forceRefreshIfNeeded(image, screen: screen)
 
 		for nsScreen in screen.nsScreens {
 			try NSWorkspace.shared.setDesktopImageURL(image, for: nsScreen, options: options)
